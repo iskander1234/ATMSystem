@@ -1,12 +1,14 @@
 package com.example.demo;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Bank{
 
     String number;
     int size;
+    Scanner scan = new Scanner(System.in);
 
     public Bank() {
         System.out.println("Добавить карточку 6 сиволов : ");
@@ -21,7 +23,7 @@ public class Bank{
 
     public void createPin(Bank bank){
         ArrayList<Bank> banks = new ArrayList<Bank>();
-        Scanner scan = new Scanner(System.in);
+
         bank.number = scan.next();
         int length = bank.number.length();
         if (length == 6){
@@ -57,27 +59,27 @@ public class Bank{
 
     public void setMoney()
     {
-        Scanner in=new Scanner(System.in);
         int n;
         System.out.println("Сколько желаете внести? ");
-        n=in.nextInt();
+        n=scan.nextInt();
         size+=n;
     }
 
     public void getMoney()
     {
-        Scanner in=new Scanner(System.in);
         int n;
         do
         {
             System.out.println("Сколько желаете снять? ");
-            n= in.nextInt();
+            n=scan.nextInt();
             if(n>size)
                 System.out.println("У вас таких средств нет! Запросите меньшую сумму.");
         }
         while(n>size);
         size-=n;
     }
+
+
 
     public void printInfo()
     {
