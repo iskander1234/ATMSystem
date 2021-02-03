@@ -14,9 +14,5 @@ public class DemoApplication {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
-        Bank tiger = context.getBean("tiger", Bank.class);
-        tiger.outPut();
-        System.out.println("tiger = " + tiger);
-
     }
 }
