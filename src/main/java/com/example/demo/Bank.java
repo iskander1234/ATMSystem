@@ -37,7 +37,7 @@ public class Bank{
                             getMoney();
                             break;
                         case (3):
-                            outPut();
+                            printInfo();
                             break;
                     }
                 }
@@ -79,7 +79,7 @@ public class Bank{
         size-=n;
     }
 
-    public void outPut()
+    public void printInfo()
     {
         System.out.println("Текущее состояние счёта: ");
         System.out.println("Номер счета: "+ number);
