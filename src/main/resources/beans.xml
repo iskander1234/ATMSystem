@@ -3,9 +3,20 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="Bank" class="com.example.demo.Bank">
-        <property name="number" value="bank"></property>
-        <property name="size" value="1"></property>
+<!--    <bean id="bank" class="com.example.demo.ATM">-->
+<!--        <constructor-arg ref="bank"/>-->
+<!--    </bean>-->
+
+    <bean id="bank" class="com.example.demo.Bank">
+        <property name="clients">
+            <list>
+
+            </list>
+        </property>
+    </bean>
+
+    <bean id="bankService" class="com.example.demo.ATM" init-method="init_method" destroy-method="destroy">
+        <constructor-arg index="0" ref="bank"/>
     </bean>
 
 </beans>
