@@ -1,5 +1,9 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Client {
     private int client_id;
     private int cash;
@@ -8,10 +12,11 @@ public class Client {
     public Client() {
     }
 
-    public Client(int client_id, String name, int cash, String card_num) {
+    public Client(int client_id,  String card_num ,int cash ) {
         this.client_id = client_id;
-        this.cash = cash;
         this.card_num = card_num;
+        this.cash = cash;
+
     }
 
     public int getClient_id() {
