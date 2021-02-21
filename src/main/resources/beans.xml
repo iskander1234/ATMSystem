@@ -7,16 +7,16 @@
 <!--        <constructor-arg ref="bank"/>-->
 <!--    </bean>-->
 
-    <bean id="bank" class="com.example.demo.Bank">
-        <property name="clients">
-            <list>
+<!--    <bean id="bank" class="com.example.demo.Bank">-->
+<!--        <property name="clients">-->
+<!--            <list>-->
 
-            </list>
-        </property>
-    </bean>
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
 
-    <bean id="bankService" class="com.example.demo.ATM" init-method="init_method" destroy-method="destroy">
-        <constructor-arg index="0" ref="bank"/>
-    </bean>
+<!--    <bean id="Service" class="com.example.demo.ATM" init-method="init_method" destroy-method="destroy">-->
+<!--        <constructor-arg index="0" ref="bank"/>-->
+<!--    </bean>-->
 
 </beans>
